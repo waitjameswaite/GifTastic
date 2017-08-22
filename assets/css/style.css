@@ -1,0 +1,13 @@
+.navbar-brand,.navbar-nav button {
+	line-height: 90px;
+	height: 150px;
+	padding-top: 0;
+}
+
+.navbar .navbar-default {
+	background-color: #000;
+}
+
+.container {
+	background-color: black;
+}
