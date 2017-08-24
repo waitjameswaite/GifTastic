@@ -37,7 +37,7 @@ $(document).ready(function(){
 
 		var gif = $(this).attr("data-topic");
 
-		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         gif + "&api_key=dc6zaTOxFJmzC&limit=10";
 
         $.ajax({
@@ -46,6 +46,7 @@ $(document).ready(function(){
         })
         .done(function(response) {
 
+        	console.log(response);
         	var results = response.data;
 
         	for (var i = 0; i < results.length; i++) {
@@ -54,9 +55,9 @@ $(document).ready(function(){
         			var rating = results[i].rating;
         			var p = $("<p>").text("Rating: " + rating);
         			var gifImage = $("<img>");
-        			gifImage.attr("src", results[i].images.fixed_height.url);
-        			gifDiv.append(p);
+        			gifImage.attr("src", results[i].images.fixed_height_still.url);
         			gifDiv.append(gifImage);
+        			gifDiv.append(p);
 
         			$("#gifs-appear-here").prepend(gifDiv);
         		}
