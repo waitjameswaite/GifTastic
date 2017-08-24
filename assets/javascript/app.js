@@ -25,12 +25,15 @@ $(document).ready(function(){
 
 	    	var userTopic = $("#userInput").val().trim();
 	    	topics.push(userTopic);
+	    	$("#userInput").val("");
 
 	    	renderBtns();
 	    });
 	}
 
-	$(".gifTopic").on("click", function() {
+	$(document).on("click", ".gifTopic", function() {
+
+		$("#gifs-appear-here").html("");
 
 		var gif = $(this).attr("data-topic");
 
