@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	var topics = ["lasers", "spaceships", "aliens", "robots"];
+	var topics = ["Kendrick Lamar", "Frank Ocean", "Kanye West", "Tyler the Creator"];
 
 	function renderBtns() {
 
