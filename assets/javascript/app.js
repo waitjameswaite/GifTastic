@@ -14,18 +14,18 @@ $(document).ready(function(){
 	        topicsBtn.text(topics[i]);
 	        $("#btnContainer").append(topicsBtn);
 	    }
-
-	    $("#addTopicBtn").on("click", function(event) {
-
-	    	event.preventDefault();
-
-	    	var userTopic = $("#userInput").val().trim();
-	    	topics.push(userTopic);
-	    	$("#userInput").val("");
-
-	    	renderBtns();
-	    });
 	}
+
+	$("#addTopicBtn").on("click", function(event) {
+
+	   	event.preventDefault();
+
+	   	var userTopic = $("#userInput").val().trim();
+	   	topics.push(userTopic);
+	   	$("#userInput").val("");
+
+    	renderBtns();
+    });
 
 	$(document).on("click", ".gifTopic", function() {
 
